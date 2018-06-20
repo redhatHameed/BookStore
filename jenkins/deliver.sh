@@ -39,5 +39,5 @@ sudo docker login -u duppoc -p Bcmc@2018
 echo 'Pushing to docker hub'
 sudo docker push duppoc/bookstore:latest
 
-echo 'Get docker image'
-sudo docker run  -d -p 8081:8081 duppoc/bookstore
+#echo 'Get docker image'
+#sudo docker run  -d -p 8081:8081 duppoc/bookstore
