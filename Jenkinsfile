@@ -34,7 +34,7 @@ node {
                 sh  'export DOCKER_TLS_VERIFY="1"'
                 sh  'export DOCKER_HOST="tcp://192.168.64.3:2376"'
                 sh  'export DOCKER_CERT_PATH="/Users/pjadda/.minishift/certs"'
-                sh 'docker ps'
+                sh 'sudo docker ps'
          
               //sh 'bash ./jenkins/deliver.sh'
         }
