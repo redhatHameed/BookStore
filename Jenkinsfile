@@ -31,7 +31,7 @@ node {
 
         stage('Deliver') 
           {
-                sh  'export DOCKER_TLS_VERIFY="1" && export DOCKER_HOST="tcp://192.168.64.3:2376" && export DOCKER_CERT_PATH="/Users/pjadda/.minishift/certs" && sudo docker ps'
+                sh  'export PATH="/Users/pjadda/.minishift/cache/oc/v3.9.0/darwin:$PATH" &&  oc login -u system -p admin && docker ps'
          
               //sh 'bash ./jenkins/deliver.sh'
         }
