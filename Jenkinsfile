@@ -6,7 +6,8 @@ node {
     {
         def dockerHome = tool 'MyDocker'
         def mavenHome  = tool 'MyMaven'
-        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${env.PATH}"
+        def miniShiftHome='/usr/local';
+        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${miniShiftHome}/bin:${env.PATH}"
     }
 
     stage('Checkout') 
