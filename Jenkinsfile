@@ -1,3 +1,5 @@
+def oc='/Users/pjadda/.minishift/cache/oc/v3.9.0/darwin'
+def miniShiftHome='/usr/local';
 
 node
 {
@@ -5,8 +7,7 @@ node
     {
         def dockerHome = tool 'MyDocker'
         def mavenHome  = tool 'MyMaven'
-        def miniShiftHome='/usr/local';
-        env.PATH = "${dockerHome}/bin:${mavenHome}/bin:${miniShiftHome}/bin:${env.PATH}"
+        env.PATH = "${oc}:${dockerHome}/bin:${mavenHome}/bin:${miniShiftHome}/bin:${env.PATH}"
     }
 
     stage('Checkout') 
