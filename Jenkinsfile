@@ -30,7 +30,8 @@ node {
 
         stage('Deliver') 
           {
-                sh 'bash ./jenkins/deliver.sh'
+              sh 'minishift status' 
+              //sh 'bash ./jenkins/deliver.sh'
         }
 }
 
