@@ -32,7 +32,7 @@ node {
         stage('Deliver') 
           {
               sh 'minishift status'
-              sh 'minishift profle set minishift'
+              sh 'minishift profile set minishift'
               sh  'minishift status'
               //sh 'bash ./jenkins/deliver.sh'
         }
