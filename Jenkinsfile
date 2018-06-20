@@ -31,8 +31,8 @@ node
 
         stage('Deliver') 
           {
-                //sh  'oc login -u system -p admin https://192.168.64.3:8443 --insecure-skip-tls-verify'
-                sh 'minishift start'
+                sh  'oc login -u system -p admin https://192.168.64.3:8443 --insecure-skip-tls-verify'
+                //sh 'minishift start'
               //sh 'bash ./jenkins/deliver.sh'
         }
 }
