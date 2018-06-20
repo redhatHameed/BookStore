@@ -31,7 +31,7 @@ node {
 
         stage('Deliver') 
           {
-                sh  'export PATH="/Users/pjadda/.minishift/cache/oc/v3.9.0/darwin:$PATH" &&  oc login -u system -p admin https://192.168.64.3:8443 --insecure-skip-tls-verify  && docker ps'
+                sh  'export PATH="/Users/pjadda/.minishift/cache/oc/v3.9.0/darwin:$PATH" &&  oc login -u system -p admin https://192.168.64.3:8443 --insecure-skip-tls-verify  && sudo docker ps'
          
               //sh 'bash ./jenkins/deliver.sh'
         }
