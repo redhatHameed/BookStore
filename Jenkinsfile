@@ -19,7 +19,7 @@ node {
       stage('Build') 
            {
             sh 'uname -a'
-            sh 'mvn -B -DskipTests clean package'  
+            //sh 'mvn -B -DskipTests clean package'  
           }
 
         stage('Test') 
