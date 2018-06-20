@@ -31,13 +31,17 @@ set -x
 
  
 echo 'Building docker image of the Application'
-sudo docker build -f Dockerfile -t duppoc/bookstore:latest .
+#sudo docker build -f Dockerfile -t duppoc/bookstore:latest .
+docker build -f Dockerfile -t $(minishift openshift registry)/myproject/bookstore:latest .
 
-echo 'Login into Dockerhub'
-sudo docker login -u duppoc -p Bcmc@2018
+echo 'Login into Docker Registry'
+#sudo docker login -u duppoc -p Bcmc@2018
+docker login -u developer  -p WH1TT_Trwsdtp5uk0T33jV2xzOLeLev3KzV9Dqd3Irs $(minishift openshift registry)
 
-echo 'Pushing to docker hub'
-sudo docker push duppoc/bookstore:latest
+
+echo 'Tag and Push to Registry'
+docker tag  docker.io/bookstore  $(minishift openshift registry)/myproject/bookstore:latest
+docker push   $(minishift openshift registry)/myproject/bookstore:latest
 
 #echo 'Get docker image'
 #sudo docker run  -d -p 8081:8081 duppoc/bookstore
