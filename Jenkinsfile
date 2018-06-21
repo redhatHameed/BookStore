@@ -28,7 +28,7 @@ node
             //sh 'mvn test'
             sh 'ifconfig'
             sh 'sudo cat /Users/pjadda/.ssh/known_hosts '
-            sh 'ssh docker@192.168.64.3'
+            sh 'sudo ssh docker@192.168.64.3'
         }
 
         stage('Deliver') 
