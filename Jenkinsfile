@@ -20,6 +20,8 @@ node
       stage('Build') 
            {
             sh 'uname -a'
+            //sh 'sudo cat /Users/pjadda/.ssh/known_hosts '
+            sh 'sudo ssh docker@192.168.64.3 "pwd"'
             //sh 'mvn -B -DskipTests clean package'  
           }
 
@@ -27,8 +29,6 @@ node
         {
             //sh 'mvn test'
             sh 'ifconfig'
-            sh 'sudo cat /Users/pjadda/.ssh/known_hosts '
-            sh 'sudo ssh docker@192.168.64.3 "pwd"'
         }
 
         stage('Deliver') 
