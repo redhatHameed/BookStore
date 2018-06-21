@@ -21,7 +21,7 @@ node
            {
             sh 'uname -a'
             //sh 'sudo cat /Users/pjadda/.ssh/known_hosts '
-            sh 'ssh -i /Users/pjadda/.ssh/minishift_rsa docker@192.168.64.3 "docker ps"'
+            sh 'sudo ssh -i /Users/pjadda/.ssh/minishift_rsa docker@192.168.64.3 "docker ps"'
             //sh 'mvn -B -DskipTests clean package'  
           }
 
