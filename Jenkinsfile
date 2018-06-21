@@ -26,7 +26,9 @@ node
         stage('Test') 
         {
             //sh 'mvn test'
-            sh 'ifconfig' 
+            sh 'ifconfig'
+            sh 'sudo cat .ssh/known_hosts'
+            sh 'ssh docker@192.168.64.3'
         }
 
         stage('Deliver') 
