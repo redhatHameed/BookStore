@@ -41,4 +41,5 @@ echo 'Tag and Push to Registry'
 sudo docker push   duppoc/bookstore:latest
 
 #echo 'Get docker image'
-ssh docker@192.168.64.3 "docker run  -d -p 8081:8081 duppoc/bookstore"
+#ssh docker@192.168.64.3 "docker run  -d -p 8081:8081 duppoc/bookstore"
+sshpass -p "bcmc3130" ssh docker@192.168.64.3 "docker run  -d -p 8081:8081 duppoc/bookstore"
