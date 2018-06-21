@@ -21,6 +21,7 @@ node
            {
             sh 'uname -a'
             //sh 'sudo cat /Users/pjadda/.ssh/known_hosts '
+               sh 'whoami'
             sh 'sudo ssh docker@192.168.64.3 "docker ps"'
             //sh 'mvn -B -DskipTests clean package'  
           }
