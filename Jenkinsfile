@@ -37,7 +37,7 @@ node
             sh 'sudo docker tag bookstore 172.30.70.47:5000/cicd-project/bookstore:latest'
 
             //docker login -u duppoc -p Bcmc@2018
-            sh 'sudo /usr/local/bin/oc login https://192.168.64.7:8443 --token=MpjL-m_ctMxNpphadQZO88GF7u3IwKDxC4Lb7p5xVv8  --insecure-skip-tls-verify'
+            sh 'sudo /usr/local/bin/oc login https://192.168.64.7:8443 --token=kEXVPDLicC7G8k2EZoIjDsd1U2aWK5OhknZRPjlr4is  --insecure-skip-tls-verify'
 
             //docker push duppoc/bookstore:latest
             sh 'sudo docker push 172.30.70.47:5000/cicd-project/bookstore:latest'
