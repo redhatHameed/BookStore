@@ -27,18 +27,19 @@ echo 'application (which Jenkins built using Maven) to the Jenkins UI.'
 set -x
 
  
-echo 'Building docker image of the Application'
+#echo 'Building docker image of the Application'
 #sudo docker build -f Dockerfile -t duppoc/bookstore:latest .
-sudo docker build -f Dockerfile -t $(minishift openshift registry)/myproject/bookstore:latest .
+#sudo docker build -f Dockerfile -t 172.30.1.1:5000/myproject/bookstore:latest .
 
-echo 'Login into Docker Registry'
+#echo 'Login into Docker Registry'
 #sudo docker login -u duppoc -p Bcmc@2018
-sudo docker login -u developer  -p WH1TT_Trwsdtp5uk0T33jV2xzOLeLev3KzV9Dqd3Irs $(minishift openshift registry)
+#sudo docker login -u developer  -p WH1TT_Trwsdtp5uk0T33jV2xzOLeLev3KzV9Dqd3Irs $(minishift openshift registry)
 
 
-echo 'Tag and Push to Registry'
-sudo docker tag  docker.io/bookstore  $(minishift openshift registry)/myproject/bookstore:latest
-sudo docker push   $(minishift openshift registry)/myproject/bookstore:latest
+#echo 'Tag and Push to Registry'
+#sudo docker tag  docker.io/bookstore  172.30.1.1:5000/myproject/bookstore:latest
+#sudo docker push   duppoc/bookstore:latest
 
 #echo 'Get docker image'
-#sudo docker run  -d -p 8081:8081 duppoc/bookstore
+#ssh docker@192.168.64.3 "docker run  -d -p 8081:8081 duppoc/bookstore"
+#sshpass -p "bcmc3130" ssh docker@192.168.64.3 "docker run  -d -p 8081:8081 duppoc/bookstore"
